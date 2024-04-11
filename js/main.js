@@ -51,7 +51,6 @@ breakpoints: {
 const swiperReview = new Swiper('.swiper_review', {
 
     slidesPerView: 3,
-    spaceBetween: 30,
     speed: 2000,
 // Navigation arrows
 navigation: {
@@ -77,8 +76,32 @@ breakpoints: {
 }
 });
 
+});
+
+//------------------------------------------------------------------------Video
+
+window.addEventListener('DOMContentLoaded', function () {
+  const videos = this.document.querySelectorAll('.video');
+  const iconVideo = this.document.querySelector('.video__icon');
+
+  videos.forEach(function(video) {
+
+    video.addEventListener("click", function () {
+      iconVideo.classList.add('icon-none');
+      if (video.classList.contains('play')) {
+        return;
+      }
+
+      video.classList.add('play');
+      let src = video.dataset.src;
+      video.insertAdjacentHTML('afterbegin', '<iframe loading="lazy" src="' + src + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+    });
+  })
 
 });
+
+//------------------------------------------------------------------------Video
+
 
 //------------------------------------------------------------------------Меню-Бургер
 const burgerMenu = document.querySelector('.header__burger');
