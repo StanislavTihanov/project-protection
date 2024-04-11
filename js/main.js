@@ -17,6 +17,67 @@ $( document ).ready(function() {
 		$(this).toggleClass('active-step');
 		$(this).next('.home_steps__container_list').slideToggle();
 	});
+
+  const swiperExamples = new Swiper('.swiper_examples', {
+
+    slidesPerView: 3,
+    spaceBetween: 30,
+    speed: 2000,
+// Navigation arrows
+navigation: {
+  nextEl: '.examples-button-next',
+  prevEl: '.examples-button-prev',
+},
+breakpoints: {
+  // when window width is >= 320px
+  300: {
+    slidesPerView: 1,
+    spaceBetween: 20
+  },
+  // when window width is >= 480px
+  480: {
+    slidesPerView: 2,
+    spaceBetween: 30
+  },
+  // when window width is >= 640px
+  770: {
+    slidesPerView: 3,
+    spaceBetween: 30
+  }
+}
+
+});
+
+const swiperReview = new Swiper('.swiper_review', {
+
+    slidesPerView: 3,
+    spaceBetween: 30,
+    speed: 2000,
+// Navigation arrows
+navigation: {
+  nextEl: '.review-button-next',
+  prevEl: '.review-button-prev',
+},
+breakpoints: {
+  // when window width is >= 320px
+  300: {
+    slidesPerView: 1,
+    spaceBetween: 20
+  },
+  // when window width is >= 480px
+  480: {
+    slidesPerView: 2,
+    spaceBetween: 30
+  },
+  // when window width is >= 640px
+  980: {
+    slidesPerView: 3,
+    spaceBetween: 30
+  }
+}
+});
+
+
 });
 
 //------------------------------------------------------------------------Меню-Бургер
