@@ -140,12 +140,13 @@ body.lock {
   font-size: clamp(12px, 1.3vw, 16px);
   color: var(--color-white);
   background-color: var(--color-orange);
-  padding: 15px 45px;
+  padding: 13px 43px;
   border-radius: 7px;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
   line-height: 20px;
+  border: 1px solid var(--color-orange);
 }
 :root {
   --color-white: #FFFFFF;
@@ -436,8 +437,10 @@ input[type="submit"] {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  padding: 0px 30px;
+  padding: 0px 28px;
   text-transform: uppercase;
+  padding-top: 2px;
+  border: 1px solid var(--color-orange);
 }
 form p {
   text-align: start;
@@ -963,7 +966,7 @@ aside {
   margin-bottom: -1000%;
 }
 .nav {
-  width: 200px;
+  width: 150px;
 }
 .primary {
   margin-top: 60px;
@@ -1061,11 +1064,11 @@ aside {
   color: var(--color-blue);
   margin-bottom: 10px;
 }
-.aboutus__docs-block .button a {
-   padding: 10px 35px;
-}
 .aboutus__body .button a {
   padding: 12px 10px;
+}
+.aboutus__docs-block .button a {
+  padding: 10px 35px;
 }
 /*---------------------------------------aboutus----------------------------*/
 
@@ -1408,12 +1411,18 @@ aside {
 .cardfile__img-flower img {
   width: 250px;
 }
-.details__blocks {
+.details .feedback__button {
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+}
+.details__blocks,
+.services__blocks {
   display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(290px, 1fr));
   gap: 35px;
 }
-.details__block {
+.details__block,
+.services__block {
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   padding: 30px;
   border-radius: 20px;
@@ -1458,7 +1467,7 @@ aside {
   color: var(--color-black);
   border: 1px solid var(--color-blue);
   border-radius: 7px;
-  padding: 11px 24px;
+  padding: 11px 5px;
 }
 .details__block-sum {
   border-bottom: 1px solid #D8E5EE;
@@ -1481,10 +1490,6 @@ aside {
   width: 100%;
   padding: 10px;
 }
-
-
-
-
 
 .accordion__title {
   display: flex;
@@ -1550,6 +1555,39 @@ aside {
   transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out;
 }
 /*---------------------------------------cardfile----------------------------*/
+
+
+/*---------------------------------------why----------------------------*/
+.why__blocks {
+  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
+  gap: 10px 20px;
+}
+.why__block img {
+  margin-bottom: 10px;
+}
+.why__block-title {
+  margin-bottom: 20px;
+  max-width: 170px;
+}
+.why__block-title h3,
+.services__block-title h3 {
+  font-weight: 700;
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: var(--color-blue);
+}
+.why__block-text,
+.services__block-text {
+  font-size: clamp(14px, 1.3vw, 16px);
+}
+.services__block-title {
+  margin-bottom: 13px;
+}
+.services__block img {
+  margin-bottom: 13px;
+}
+/*---------------------------------------why----------------------------*/
 
 /*---------------------------------------footer----------------------------*/
 
@@ -2081,6 +2119,22 @@ form{
     color: var(--color-blue);
     transition: all 0.3s;
   }
+  .details .feedback__button:hover {
+    transition: all 0.3s;
+    color: var(--color-white);
+    border: 1px solid var(--color-blue);
+    background-color: var(--color-blue);
+  }
+  .button a:hover {
+    transition: all 0.3s;
+    color: var(--color-orange);
+    background-color: var(--color-white);
+  }
+  input[type="submit"]:hover {
+    transition: all 0.3s;
+    background: var(--color-white);
+    color: var(--color-orange);
+  }
 }
 /*---------------------------------------media-hover----------------------------*/
 
@@ -2514,6 +2568,9 @@ form{
   .cardfile__months {
     margin-bottom: 50px;
     padding-left: 5px;
+  }
+  .details__blocks, .services__blocks {
+    gap: 20px;
   }
 }
 /*---------------------------------------media----------------------------*/
