@@ -78,6 +78,16 @@ breakpoints: {
 
 });
 
+
+const questionsBtn = document.querySelector('.feedback__button');
+const questionsMore = document.querySelector('.feedback__blocks-more');
+questionsBtn.addEventListener('click', function () {
+        questionsMore.classList.add('more');
+        questionsBtn.classList.add('close');
+})
+
+
+
 //------------------------------------------------------------------------Video
 
 window.addEventListener('DOMContentLoaded', function () {
