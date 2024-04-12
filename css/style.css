@@ -391,6 +391,9 @@ body.lock {
   max-width: 580px;
   margin: 0 auto;
 }
+.form__body form input[type="submit"] {
+  width: 316px;
+}
 select {
   border: none;
   padding: 0 0 0 25px;
@@ -412,7 +415,7 @@ select {
 }
 input {
   border: none;
-  padding: 0 0 0 25px;
+  padding: 12px 25px;
   border-radius: 7px;
   height: 44px;
   width: 100%;
@@ -427,15 +430,11 @@ input {
 input[type="submit"] {
   background: #ED9523;
   color: #fff;
-  font-size: 16px;
   cursor: pointer;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  margin: 0 auto;
-  padding: 0;
-  width: 316px;
-  height: 50px;
+  padding: 0px 30px;
   text-transform: uppercase;
 }
 form p {
@@ -950,17 +949,19 @@ form p a {
 }
 /*---------------------------------------news----------------------------*/
 
+
+/*---------------------------------------aboutus----------------------------*/
 aside {
   background-color: #F6F9FA;
-  padding: 60px 20px 0px 20px;
+  padding: 60px 40px 0px 40px;
   position: relative;
   z-index: 2;
   margin-bottom: -1000%;
 }
 .nav {
-  width: 220px;
+  width: 200px;
 }
-.aboutus {
+.primary {
   margin-top: 60px;
 }
 .aboutus__content .subtitle {
@@ -1060,6 +1061,9 @@ aside {
    padding: 10px 35px;
 }
 
+/*---------------------------------------aboutus----------------------------*/
+
+/*---------------------------------------blue-section----------------------------*/
 .blue-section {
   background-color: var(--color-blue);
 }
@@ -1067,6 +1071,7 @@ aside {
   max-width: 1220px;
   padding: 50px 10px 50px 300px;
   margin: 0 auto;
+  position: relative;
 }
 .blue-section__title {
   margin-bottom: 32px;
@@ -1100,6 +1105,72 @@ aside {
   font-size: clamp(14px, 1.3vw, 16px);
   margin-bottom: 10px;
 }
+.blue-section__wrapper {
+  margin-left: 100px;
+}
+.blue-section--mod {
+  margin-bottom: 122px;
+}
+.blue-section__form form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.blue-section__form p {
+  color: var(--color-white);
+}
+.blue-section__image {
+  position: absolute;
+  bottom: -120px;
+  left: 168px;
+}
+/*---------------------------------------blue-section----------------------------*/
+
+
+/*---------------------------------------team----------------------------*/
+
+.team__body {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 35px;
+   margin-bottom: 100px;
+}
+.team__person {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 30px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 25px;
+}
+.team__person-image img {
+  width: 100%;
+}
+.team__person-info {
+  flex-basis: 190px;
+}
+.team__person-info dt {
+  margin-bottom: 7px;
+}
+.team__person-info dt h3 {
+  font-weight: 600;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+.team__person-info dd p {
+  font-size: clamp(14px, 1.3vw, 16px);
+}
+
+/*---------------------------------------team----------------------------*/
+
+
+/*---------------------------------------team----------------------------*/
+
+/*---------------------------------------team----------------------------*/
+
+
+
 /*---------------------------------------footer----------------------------*/
 
 .footer {
@@ -1620,10 +1691,6 @@ form{
 
 /*---------------------------------------media-hover----------------------------*/
 @media(hover:hover) {
-  .menu__list-item a:hover {
-    color: var(--color-blue);
-    transition: all 0.3s;
-  }
   .header__block button:hover {
     transition: all 0.3s;
     background-color: var(--color-white);
@@ -1686,6 +1753,14 @@ form{
   .solve__image-right {
     max-width: 200px;
   }
+  .team__body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 50px;
+ }
+ .blue-section__form form {
+  flex-wrap: wrap;
+ }
 }
 
 
@@ -1827,6 +1902,11 @@ form{
   .blue-section__content {
     padding: 50px 10px 50px 200px;
   }
+  .blue-section__image  {
+    position: absolute;
+    bottom: -100px;
+    left: 50px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1915,7 +1995,31 @@ form{
   .aboutus__docs {
     margin-bottom: 50px;
   }
+  .blue-section__image  {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+  }
+  .blue-section--mod {
+    margin-bottom: 50px;
+  }
 }
+
+@media (max-width: 500px) {
+  .team__person {
+    flex-wrap: wrap;
+  }
+  .team__person-info {
+    flex-basis: 100%;
+  }
+  .blue-section__wrapper {
+    margin-left: 0px;
+  }
+  .blue-section__image {
+    display: none;
+  }
+}
+
 
 @media (max-width: 400px) {
   .footer {
@@ -1929,6 +2033,12 @@ form{
   }
   .blue-section__content {
     padding: 30px 10px 30px 110px;
+  }
+  .aboutus__body .button a {
+    padding: 10px;
+  }
+  .main__inner {
+    gap: 0px;
   }
 }
 /*---------------------------------------media----------------------------*/
