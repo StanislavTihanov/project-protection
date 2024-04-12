@@ -1593,6 +1593,7 @@ aside {
 }
 /*---------------------------------------why----------------------------*/
 
+/*---------------------------------------stages----------------------------*/
 .stages {
   margin-bottom: 100px;
 }
@@ -1626,6 +1627,50 @@ aside {
 .stages__body .home_steps__container_icon {
    margin-left: 75px;
 }
+/*---------------------------------------stages----------------------------*/
+
+/*---------------------------------------whatdebts----------------------------*/
+.whatdebts {
+  margin-bottom: 55px;
+}
+.whatdebts__block {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.whatdebts__block-image img {
+  width: 100%;
+}
+.whatdebts__block-info {
+  flex-basis: 458px;
+}
+.whatdebts__block-info span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 13px 22px 8px 22px;
+  background-color: #F2F7F9;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 35px;
+  color: var(--color-orange);
+}
+.whatdebts__block-info-title {
+  margin-bottom: 15px;
+}
+.whatdebts__block-info-title h2 {
+  font-weight: 700;
+  color: var(--color-blue);
+  font-size: clamp(16px, 1.6vw, 20px);
+}
+.whatdebts__block-info-text {
+  font-size: clamp(16px, 1.6vw, 20px);
+}
+
+/*---------------------------------------whatdebts----------------------------*/
 
 /*---------------------------------------footer----------------------------*/
 
@@ -2257,6 +2302,12 @@ form{
   flex-wrap: wrap;
   justify-content: center;
  }
+  .whatdebts__block {
+   flex-wrap: wrap;
+ }
+  .whatdebts__block-info--mod {
+    order: -1;
+  }
 }
 
 
