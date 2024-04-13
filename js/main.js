@@ -76,6 +76,42 @@ breakpoints: {
 }
 });
 
+const articlesSlider = new Swiper('.articles__slider', {
+
+  slidesPerView: 3,
+  speed: 2000,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.review-button-next',
+      prevEl: '.review-button-prev',
+      },
+  pagination: {
+   el: '.swiper-pagination',
+   clickable: true,
+   renderBullet: function(index, className) {
+    return'<span class="' + className + '">' + (index + 1) + '</span>';
+   }
+  },
+  breakpoints: {
+  // when window width is >= 320px
+  300: {
+    slidesPerView: 1,
+    spaceBetween: 20
+  },
+  // when window width is >= 480px
+  480: {
+    slidesPerView: 1,
+    spaceBetween: 30
+  },
+  // when window width is >= 640px
+  980: {
+    slidesPerView: 1,
+    spaceBetween: 30
+  }
+  }
+});
+
+
 });
 
 //------------------------------------------------------------------------добавление контент при клике на кнопку на странице отзывов
@@ -565,9 +601,6 @@ titles.forEach(item => item.addEventListener('click', () => {
       activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
     }
 }));
-document.querySelector('[data-tab="tab-1').classList.add('active');
-document.querySelector('#tab-1').classList.add('active');
-document.querySelector('#tab-1').style.maxHeight = document.querySelector('#tab-1').scrollHeight + 'px';
 //------------------------------------------------------------------------Accordion
 
 
