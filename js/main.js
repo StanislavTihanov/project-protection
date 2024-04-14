@@ -17,101 +17,10 @@ $( document ).ready(function() {
 		$(this).toggleClass('active-step');
 		$(this).next('.home_steps__container_list').slideToggle();
 	});
-
-  const swiperExamples = new Swiper('.swiper_examples', {
-
-    slidesPerView: 3,
-    spaceBetween: 30,
-    speed: 2000,
-// Navigation arrows
-navigation: {
-  nextEl: '.examples-button-next',
-  prevEl: '.examples-button-prev',
-},
-breakpoints: {
-  // when window width is >= 320px
-  300: {
-    slidesPerView: 1,
-    spaceBetween: 20
-  },
-  // when window width is >= 480px
-  480: {
-    slidesPerView: 2,
-    spaceBetween: 30
-  },
-  // when window width is >= 640px
-  770: {
-    slidesPerView: 3,
-    spaceBetween: 30
-  }
-}
-
 });
 
-const swiperReview = new Swiper('.swiper_review', {
 
-    slidesPerView: 3,
-    speed: 2000,
-// Navigation arrows
-navigation: {
-  nextEl: '.review-button-next',
-  prevEl: '.review-button-prev',
-},
-breakpoints: {
-  // when window width is >= 320px
-  300: {
-    slidesPerView: 1,
-    spaceBetween: 20
-  },
-  // when window width is >= 480px
-  480: {
-    slidesPerView: 2,
-    spaceBetween: 30
-  },
-  // when window width is >= 640px
-  980: {
-    slidesPerView: 3,
-    spaceBetween: 30
-  }
-}
-});
 
-const articlesSlider = new Swiper('.articles__slider', {
-
-  slidesPerView: 3,
-  speed: 2000,
-    // Navigation arrows
-    navigation: {
-      nextEl: '.review-button-next',
-      prevEl: '.review-button-prev',
-      },
-  pagination: {
-   el: '.swiper-pagination',
-   clickable: true,
-   renderBullet: function(index, className) {
-    return'<span class="' + className + '">' + (index + 1) + '</span>';
-   }
-  },
-  breakpoints: {
-  // when window width is >= 320px
-  300: {
-    slidesPerView: 1,
-    spaceBetween: 20
-  },
-  // when window width is >= 480px
-  480: {
-    slidesPerView: 1,
-    spaceBetween: 30
-  },
-  // when window width is >= 640px
-  980: {
-    slidesPerView: 1,
-    spaceBetween: 30
-  }
-  }
-});
-
-});
 
 
 
@@ -458,22 +367,38 @@ document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {
 
 
 //------------------------------------------------------------------------Слайдер
-//const swiper = new Swiper('.swiper', {
-//  direction: 'horizontal',
-//  loop: true,
-//  pagination: {
-//    el: '.swiper-pagination',
-//    clickable: true,
-//  },
-//  navigation: {
-//    nextEl: '.swiper-button-next',
-//    prevEl: '.swiper-button-prev',
-//  },
-//  autoplay: {
-//    delay: 2000,
-//  },
-//  speed: 2000,
-//});
+const sw = new Swiper('.articles__slider', {
+  direction: 'horizontal',
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  speed: 2000,
+});
+
+const swiperExamples = new Swiper('.swiper_examples', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  speed: 2000,
+});
+
+const swiperReview = new Swiper('.swiper_review', {
+  slidesPerView: 3,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  speed: 2000,
+});
 //------------------------------------------------------------------------Слайдер
 
 
