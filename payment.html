@@ -130,10 +130,10 @@
               <a href="#">Цифры по регионам</a>
             </li>
             <li>
-              <a href="#">Вопрос-ответ</a>
+              <a class="active-color" href="#">Вопрос-ответ</a>
             </li>
             <li>
-              <a lass="active-color" href="#">Тест: Подходит ли мне банкротство?</a>
+              <a href="#">Тест: Подходит ли мне банкротство?</a>
             </li>
             <li>
               <a href="#">Конструктор документов</a>
@@ -145,8 +145,8 @@
         </nav>
       </aside>
 
-      <section class="suitable primary">
-        <div class="suitable__content">
+      <section class="payment primary">
+        <div class="payment__content">
 
             <ul class="breadcrumbs__list" itemscope itemtype="index.html">
               <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="index.html">
@@ -156,121 +156,194 @@
               <meta itemprop="position" content="1" />
               </li>
               <li class="breadcrumbs__item" itemprop="itemListElement">
-              <a itemprop="item" href="#!" class="breadcrumbs__link breadcrumbs__link--mod">
-              <span itemprop="name">Полезные материалы</span>
-              </a>
-              <meta itemprop="position" content="2" />
+                <span itemprop="name">Оплата</span>
+                <meta itemprop="position" content="2"/>
               </li>
-              <li class="breadcrumbs__item" itemprop="itemListElement">
-                <span itemprop="name">Подходит ли мне банкротство?</span>
-                <meta itemprop="position" content="2" />
-                </li>
             </ul>
             <div class="title">
-              <h1>Подходит ли мне банкротство?</h1>
+              <h1>Оплата</h1>
             </div>
-           
-          <div class="suitable__body">
-            <div class="suitable__body-text">
-              <p>Тест займет менее 1 минуты</p>
+           <div class="payment__block">
+            <div class="payment__text">
+              <p>Если у вас возникли сложности с оплатой просьба связаться:</p>
             </div>
-          </div>
-            <div class="suitable__block">
-              <div class="suitable__block-title">
-                <span>1</span>
-                <h2>Какая у Вас общая сумма займов?</h2>
+            <div class="payment__box">
+              <div class="payment__item">
+                <p>по телефонам: </p>
+                <p>WhatsApp: </p>
+                <p>email:</p>
               </div>
-              <div class="suitable__block-inputs">
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  до 200 тыс. рублей
-                </label>
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  от 200 до 500 тыс. руб.
-                </label>
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  от 500 тыс до 1 млн руб.
-                </label>
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  более 1 млн руб. 
-                </label>
+              <div class="payment__item">
+                <a href="tel:+78007775817">8 800 777 58 17</a>
+                <a href="https://wa.me/79916509019">+7 991 650 90 19</a>
+                <a href="mailto:info@bvoru.ru">info@bvoru.ru</a>
               </div>
             </div>
-            <div class="suitable__block">
-              <div class="suitable__block-title">
-                <span>2</span>
-                <h2>Есть ли у вас действующая ипотека или автокредит?</h2>
+            <div class="payment__text payment__text--mod">
+              <p>Оплачивая договор вы соглашаетесь с условиями  <a href="#">оферты.</a></p>
+            </div>
+           </div>
+             
+           <div class="payment__body">
+            <div class="payment__form payment__form--mod">
+              <div class="subtitle">
+                <h2>Заполните форму <strong> <br>для оплаты по карте</strong></h2>
               </div>
-              <div class="suitable__block-inputs">
+              <form>
                 <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  Есть недвижимость
+                  <input type="text" placeholder="Сумма платежа" required>
                 </label>
+                <input type="text" placeholder="ФИО">
                 <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  Есть автокредит
+                  <input type="text" name="text" placeholder="Телефон" required>
                 </label>
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  Нет ничего из перечисленного
-                </label>
+                <textarea placeholder="Комментарий"></textarea>
+                <p>Я ознакомлен и согласен с <a href="#">политикой конфиденциальности</a></p>
+                <input type="submit" value="Оплатить">
+              </form>
+            </div>
+            <div class="payment__form">
+              <div class="subtitle">
+                <h2>Легкая оплата <br><strong>по QR кодуе</strong></h2>
+              </div>
+              <div class="payment__text">
+                <p>Вы можете произвести оплату <br> используя QR код. <br> Для оплаты используйте мобильное <br> приложение вашего банка (Сбербанк, Альфа Банк, Тинькофф и др.).</p>
+              </div>
+              <div class="payment__text">
+                <a href="#">Как это сделать?</a>
+              </div>
+              <div class="payment__qr">
+                <img src="images/QR.webp" alt="qr code">
+              </div>
+              <div class="payment__text">
+                <p>QR код для оплаты</p>
               </div>
             </div>
-            <div class="suitable__block">
-              <div class="suitable__block-title">
-                <span>3</span>
-                <h2>У вас просрочки по кредитам и долгам</h2>
-              </div>
-              <div class="suitable__block-inputs">
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  Да
-                </label>
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  Нет
-                </label>
-              </div>
-            </div>
-            <div class="suitable__block">
-              <div class="suitable__block-title">
-                <span>4</span>
-                <h2>Ваш официальный доход в месяц??</h2>
-              </div>
-              <div class="suitable__block-inputs">
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  Меньше 50 тыс. руб.
-                </label>
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  Меньше 30 тыс. руб.
-                </label>
-                <label>
-                  <input class="checkbox" type="checkbox" name="coding-notes">
-                  <span class="custom-checkbox"></span>
-                  Меньше 10 тыс. руб.
-                </label>
-              </div>
-            </div>
+           </div>
         </div>
       </section>
       </div>
-      
+
+      <section class="repeating repeating--mod">
+        <div class="repeating__wrapper">
+          <div class="payment__logos">
+            <div class="payment__logos-img">
+              <img src="images/payment-logo-img1.webp" alt="logo visa">
+            </div>
+            <div class="payment__logos-img">
+              <img src="images/payment-logo-img2.webp" alt="logo master card">
+            </div>
+            <div class="payment__logos-img">
+              <img src="images/payment-logo-img3.webp" alt="logo mir">
+            </div>
+            <div class="payment__logos-img">
+              <img src="images/payment-logo-img4.webp" alt="logo sberbank">
+            </div>
+            <div class="payment__logos-img">
+              <img src="images/payment-logo-img5.webp" alt="logo alf abank">
+            </div>
+            <div class="payment__logos-img">
+              <img src="images/payment-logo-img6.webp" alt="logo web money">
+            </div>
+            <div class="payment__logos-img">
+              <img src="images/payment-logo-img7.webp" alt="logo yandex">
+            </div>
+            <div class="payment__logos-img">
+              <img src="images/payment-logo-img8.webp" alt="logo wallet">
+            </div>
+          </div>
+      </section>
+
+      <section class="blue-section">
+        <div class="blue-section__content _container">
+          <div class="blue-section__title">
+            <h2>Также Вы можете оплатить услуги Юридической компании «Защита» в отделении любого банка по следующим реквизитам:</h2>
+          </div>
+          <div class="blue-section__body blue-section__body--mod">
+            <div class="blue-section__item">
+              <h3>Название</h3>
+              <span>ИП Баянов Денис Флюнович</span>
+            </div>
+            <div class="blue-section__item">
+              <h3>ИНН</h3>
+              <span>026508079276</span>
+            </div>
+            <div class="blue-section__item">
+              <h3>ОГРНИП:</h3>
+              <address>308026514100035</address>
+            </div>
+            <div class="blue-section__item">
+              <h3>Адрес:</h3>
+              <span>127055, г. Москва, ул. Новослободская, дом 20, строение 6</span>
+            </div>
+            <div class="blue-section__item">
+              <h3>Банк:</h3>
+              <span>ПАО СБЕРБАНК</span>
+            </div>
+            <div class="blue-section__item">
+              <h3>Корреспондентский счет:</h3>
+              <span>30101810400000000225</span>
+            </div>
+            <div class="blue-section__item">
+              <h3>Расчётный счет:</h3>
+              <span>40802810438000229004</span>
+            </div>
+            <div class="blue-section__item">
+              <h3>Назначение платежа:</h3>
+              <span>Оплата юридических услуг по договору № __ от __ ____ 20___г.</span>
+            </div>
+          </div>
+          <div class="button">
+            <a href="../test.pdf" download>Скачать квитанцию для оплаты в кассе банка</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="details _container">
+        <div class="details__wrapper">
+          <div class="numbers__text numbers__text--mod">
+            <div class="aboutus__docs aboutus__docs--mod">
+              <div class="subtitle">
+                <h2>Скачать <strong>документы</strong></h2>
+              </div>
+              <div class="aboutus__docs-wrapper">
+                <div class="aboutus__docs-block">
+                  <img src="../images/icons/docs-icon1.svg" alt="icon">
+                  <h3>Памятка по взаимодействию с банками и коллекторами</h3>
+                  <p>Рекомендуется к ознакомлению</p>
+                  <div class="button">
+                    <a href="../test.pdf">Читать</a>
+                  </div>
+                </div>
+                <div class="aboutus__docs-block">
+                  <img src="../images/icons/docs-icon2.svg" alt="icon">
+                  <h3>Заявление на отзыв персональных данных</h3>
+                  <p>Отзыв своих данных</p>
+                  <div class="button">
+                    <a href="../test.pdf" download>Скачать</a>
+                  </div>
+                </div>
+                <div class="aboutus__docs-block">
+                  <img src="../images/icons/docs-icon3.svg" alt="icon">
+                  <h3>Заявление об отказе взаимодействия с коллекторами</h3>
+                  <p>Отказ от общения с коллекторами</p>
+                  <div class="button">
+                    <a href="../test.pdf" download>Скачать</a>
+                  </div>
+                </div>
+                <div class="aboutus__docs-block">
+                  <img src="../images/icons/docs-icon4.svg" alt="icon">
+                  <h3>Заявление о признании гражданина банкротом</h3>
+                  <p>Заявление о банкротстве</p>
+                  <div class="button">
+                    <a href="../test.pdf" download>Скачать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="blue-section blue-section--mod">
         <div class="blue-section__content _container">
