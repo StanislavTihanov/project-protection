@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 //------------------------------------------------------------------------Меню-Бургер
-const burgerMenu = document.querySelector('.header__burger');
+const burgerMenu = document.querySelector('.header__burger-wrapper');
 const menuBody= document.querySelector('.menu');
 
 if(burgerMenu) {
@@ -367,12 +367,15 @@ document.querySelectorAll('.dropdown').forEach(function(dropDownWrapper) {
 
 
 //------------------------------------------------------------------------Слайдер
-const sw = new Swiper('.articles__slider', {
+const articlesSlider = new Swiper('.articles__slider', {
   direction: 'horizontal',
   loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -389,6 +392,23 @@ const swiperExamples = new Swiper('.swiper_examples', {
     prevEl: '.swiper-button-prev',
   },
   speed: 2000,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  }
 });
 
 const swiperReview = new Swiper('.swiper_review', {
@@ -398,8 +418,26 @@ const swiperReview = new Swiper('.swiper_review', {
     prevEl: '.swiper-button-prev',
   },
   speed: 2000,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    580: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    770: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  }
 });
 //------------------------------------------------------------------------Слайдер
+
 
 
 //------------------------------------------------------------------------popup
