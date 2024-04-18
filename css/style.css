@@ -312,12 +312,57 @@ body.lock {
   color: var(--color-black);
   text-transform: uppercase;
 }
-.menu__list-item--mod a {
+.menu__list-item--mod {
+  position: relative;
+}
+.menu__list-item--mod {
   background-color: var(--color-blue);
   color: var(--color-white);
   padding: 11px 25px;
+  color: var(--color-white);
+  text-transform: uppercase;
 }
+.select-list {
+  position: absolute;
+  background: var(--color-white);
+  padding: 25px;
+  display: none;
+  margin-top: 10px;
+}
+.select-list__item {
+  padding-bottom: 8px;
+}
+.select-list__item:not(:last-child) {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #D8E5EE;
+}
+.select-list__item a {
+  color: var(--color-black);
+  font-size: clamp(12px, 1.3vw, 16px);
+}
+
+.menu__list li:hover .select-list {
+  display: block;
+}
+
+
 /*---------------------------------------header----------------------*/
+
+/*---------------------------------------блок для демонстрации страниц----------------------*/
+.block-links {
+  margin-bottom: 20px;
+}
+.block-links a {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-blue);
+  font-size: 18px;
+}
+/*---------------------------------------блок для демонстрации страниц----------------------*/
+
+
+
+
 
 /*---------------------------------------main-section----------------------*/
 .main-section{
@@ -766,11 +811,11 @@ form textarea {
 }
 .swiper_examples__container .swiper-button-prev {
   left: -30px;
-  top: 35%;
+  top: 45%;
 }
 .swiper_examples__container .swiper-button-next {
   right: -30px;
-  top: 35%;
+  top: 45%;
 }
 .swiper_examples__container .swiper-button-prev, 
 .swiper_examples__container .swiper-button-next {
@@ -855,7 +900,7 @@ form textarea {
   border-radius: 0px;
 }
 .review__block {
-  width: 330px;
+  width: 370px;
 }
 /*---------------------------------------review----------------------------*/
 
@@ -1814,6 +1859,9 @@ aside {
   border-bottom-left-radius: 10px;
 
 }
+.questions__body {
+  margin-bottom: 100px;
+}
 .accordion__title-icon img {
   height: 100%;
   width: 30px;
@@ -2092,6 +2140,7 @@ aside {
   justify-content: space-between;
   align-items: center;
   gap: 20px 10px;
+  margin-bottom: 64px;
 }
 .recommendations__block {
   display: flex;
@@ -2280,7 +2329,8 @@ aside {
     color: var(--color-blue);
     border: 1px solid var(--color-blue);
   }
-  .cardfile__months-block .accordion__content ul li span:hover {
+  .cardfile__months-block .accordion__content ul li span:hover,
+  .select-list__item a:hover {
     color: var(--color-blue);
     transition: all 0.3s;
   }
@@ -2305,6 +2355,7 @@ aside {
     color: var(--color-white);
     background-color: var(--color-blue);
   }
+
 }
 /*---------------------------------------media-hover----------------------------*/
 
@@ -2825,10 +2876,6 @@ aside {
   .questions__body .accordion__title span {
     margin-left: 5px;
   }
-  .slick-dots {
-    margin-left: 120px;
-    margin-bottom: 3px;
-  }
 }
 
 
@@ -2910,6 +2957,12 @@ aside {
     margin-bottom: 50px;
   }
   .home_steps {
+    margin-bottom: 50px;
+  }
+  .review__block {
+    max-width: 340px;
+  }
+  .questions__body {
     margin-bottom: 50px;
   }
 }
