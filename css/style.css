@@ -316,10 +316,8 @@ body.lock {
   position: relative;
 }
 .menu__list-item--mod {
-  background-color: var(--color-blue);
-  color: var(--color-white);
+  color: var(--color-black);
   padding: 11px 25px;
-  color: var(--color-white);
   text-transform: uppercase;
 }
 .select-list {
@@ -328,6 +326,7 @@ body.lock {
   padding: 25px;
   display: none;
   margin-top: 10px;
+  max-width: 300px;
 }
 .select-list__item {
   padding-bottom: 8px;
@@ -344,8 +343,10 @@ body.lock {
 .menu__list li:hover .select-list {
   display: block;
 }
-
-
+.menu__list-item--mod2 {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
 /*---------------------------------------header----------------------*/
 
 /*---------------------------------------блок для демонстрации страниц----------------------*/
@@ -2355,7 +2356,10 @@ aside {
     color: var(--color-white);
     background-color: var(--color-blue);
   }
-
+  .menu__list-item--mod:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+  }
 }
 /*---------------------------------------media-hover----------------------------*/
 
